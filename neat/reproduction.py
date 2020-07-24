@@ -160,8 +160,8 @@ class DefaultReproduction(DefaultClassConfig):
                 min_distance[i] = float('inf')
                 for i1, g1 in old_members:
                     # 如果这个species不是它自己。
-                    if i != i:
-                        temp = g.distance(g1, config) + 1
+                    if i != i1:
+                        temp = g.distance(g1, config.genome_config) + 1
                         # 如果这个距离比已知的小，就替换。
                         if temp < min_distance[i]:
                             min_distance[i] = temp
